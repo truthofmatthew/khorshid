@@ -57,5 +57,9 @@ for (const size of [128, 48, 16]) execFileSync('sips', ['-z', String(size), Stri
 for (const [name, url] of SHOTS) await render(url, `store/out/${name}`, 1280, 800);
 await render('/store/promo.html', 'store/out/promo-880x560.png', 880, 560);
 execFileSync('sips', ['-z', '280', '440', 'store/out/promo-880x560.png', '--out', 'store/out/promo-440x280.png'], { stdio: 'ignore' });
+// Social share image for the landing page.
+await render('/store/og.html', 'store/out/og-1200x630.png', 1200, 630);
+execFileSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '85', 'store/out/og-1200x630.png', '--out', 'store/out/og-1200x630.jpg'], { stdio: 'ignore' });
+
 server.close();
 console.log('wrote store/out/*.png');

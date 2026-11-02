@@ -20,7 +20,7 @@ copy('src/ext/popup/popup.html', 'dist/extension/popup.html');
 copy('src/ext/popup/popup.css', 'dist/extension/popup.css');
 copy('public/fonts', 'dist/extension/fonts');
 copy('public/icons', 'dist/extension/icons');
-copy('public/fonts', 'dist/web/fonts');
+copy('public/fonts/Vazirmatn.woff2', 'dist/web/fonts/Vazirmatn.woff2'); // the web pages only use Vazirmatn
 copy('src/web/widget.html', 'dist/web/widget/index.html');
 copy('src/web/calendar.html', 'dist/web/calendar/index.html');
 copy('src/web/privacy.html', 'dist/web/privacy/index.html');
