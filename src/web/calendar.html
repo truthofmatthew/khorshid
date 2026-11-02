@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ساخت تقویم شمسی برای نوشن | خورشید</title>
+  <meta name="description" content="تقویم شمسی رایگان برای نوشن، Obsidian و هر سایتی. نوع و رنگ را انتخاب کنید، لینک را کپی کنید و در نوشن با /embed بچسبانید.">
+  <link rel="canonical" href="https://truthofmatthew.com/khorshid/calendar/">
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <main class="builder">
+    <header>
+      <a href="../" class="back">خورشید</a>
+      <h1>تقویم شمسی برای نوشن</h1>
+      <p class="lead">نوع تقویم را انتخاب کنید، لینک را کپی کنید و در نوشن بنویسید <code>/embed</code> و لینک را بچسبانید.</p>
+    </header>
+
+    <form id="opts" class="opts">
+      <fieldset>
+        <legend>نوع</legend>
+        <label><input type="radio" name="type" value="month" checked> ماه</label>
+        <label><input type="radio" name="type" value="today"> امروز</label>
+        <label><input type="radio" name="type" value="week"> هفته</label>
+        <label><input type="radio" name="type" value="countdown"> شمارش معکوس</label>
+      </fieldset>
+      <fieldset>
+        <legend>رنگ زمینه</legend>
+        <label><input type="radio" name="theme" value="auto" checked> خودکار</label>
+        <label><input type="radio" name="theme" value="light"> روشن</label>
+        <label><input type="radio" name="theme" value="dark"> تیره</label>
+      </fieldset>
+      <fieldset>
+        <legend>رنگ اصلی</legend>
+        <div class="swatches">
+          <label><input type="radio" name="accent" value="b5452f" checked><span style="--c:#b5452f" title="آجری"></span></label>
+          <label><input type="radio" name="accent" value="2e7d5b"><span style="--c:#2e7d5b" title="سبز"></span></label>
+          <label><input type="radio" name="accent" value="2f6db5"><span style="--c:#2f6db5" title="آبی"></span></label>
+          <label><input type="radio" name="accent" value="7a4fb5"><span style="--c:#7a4fb5" title="بنفش"></span></label>
+          <label><input type="radio" name="accent" value="37352f"><span style="--c:#37352f" title="مشکی"></span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>اعداد</legend>
+        <label><input type="radio" name="digits" value="fa" checked> ۱۲۳</label>
+        <label><input type="radio" name="digits" value="en"> 123</label>
+      </fieldset>
+      <fieldset id="cd" hidden>
+        <legend>شمارش معکوس تا</legend>
+        <label>تاریخ شمسی <input name="to" placeholder="۱۴۰۶/۱/۱" inputmode="numeric" dir="ltr"></label>
+        <label>عنوان <input name="label" placeholder="تا نوروز"></label>
+      </fieldset>
+    </form>
+
+    <section class="preview" aria-label="پیش‌نمایش">
+      <iframe id="frame" title="پیش‌نمایش تقویم" loading="lazy"></iframe>
+    </section>
+
+    <div class="copy">
+      <input id="url" readonly dir="ltr" aria-label="لینک تقویم">
+      <button id="copy" type="button">کپی لینک</button>
+    </div>
+
+    <section class="how">
+      <h2>در نوشن</h2>
+      <ol>
+        <li>لینک بالا را کپی کنید.</li>
+        <li>در صفحه‌ی نوشن بنویسید <code>/embed</code> و Enter بزنید.</li>
+        <li>لینک را بچسبانید و «Embed link» را بزنید. اندازه را با کشیدن گوشه‌ها تنظیم کنید.</li>
+      </ol>
+      <h2>جاهای دیگر</h2>
+      <p>در Obsidian، Coda، ClickUp یا سایت خودتان این کد را بگذارید:</p>
+      <pre dir="ltr"><code id="iframe-code"></code></pre>
+    </section>
+  </main>
+  <script src="../builder.js"></script>
+</body>
+</html>

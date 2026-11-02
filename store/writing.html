@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "Vazirmatn"; src: url("/dist/extension/fonts/Vazirmatn.woff2") format("woff2"); font-weight: 100 900; }
+body { margin: 0; height: 100vh; display: grid; place-content: center; gap: 22px; background: #f7f6f3; font: 20px/1.7 "Vazirmatn", sans-serif; color: #37352f; }
+.card { width: 760px; background: #fff; border-radius: 14px; box-shadow: 0 0 0 1px rgba(15,15,15,.08), 0 8px 24px rgba(15,15,15,.08); padding: 18px 22px; }
+.label { font-size: 13px; color: #787774; margin-bottom: 6px; }
+.before { direction: ltr; text-align: left; font-family: ui-sans-serif, -apple-system, sans-serif; }
+.before mark { background: #fbe4e4; border-radius: 4px; padding: 0 2px; }
+.after mark { background: #dbeddb; border-radius: 4px; padding: 0 2px; }
+.keys { text-align: center; font-size: 15px; color: #787774; }
+kbd { font: 14px ui-monospace, monospace; background: #fff; border: 1px solid #ddd; border-bottom-width: 3px; border-radius: 6px; padding: 2px 8px; color: #37352f; }
+</style></head>
+<body>
+  <div class="card"><div class="label">قبل: کیبورد انگلیسی بود</div><div class="before"><mark>sghl ]i ofv? hlv,c shuj ni [gsi nhvdl.</mark></div></div>
+  <div class="keys"><span dir="ltr"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd></span> یا کلیک راست ← «اصلاح زبان کیبورد»</div>
+  <div class="card after"><div class="label">بعد</div><div><mark id="out"></mark></div></div>
+  <div class="card after"><div class="label">«اصلاح نگارش فارسی»: ي و ك عربی، نیم‌فاصله، فاصله‌ی قبل از علامت‌ها</div><div id="out2"></div></div>
+<script src="/dist/extension/fix.js"></script>
+<script>
+// Use the real fixer on the "before" text so the screenshot shows its actual output.
+const host = document.createElement('textarea'); document.body.append(host);
+host.value = document.querySelector('.before mark').textContent; host.focus(); host.setSelectionRange(0, 0);
+__khFix('layout'); document.getElementById('out').textContent = host.value;
+host.value = 'كتاب ها را مي خوانم و يادداشت مي نويسم .'; host.setSelectionRange(0, 0);
+__khFix('persian'); document.getElementById('out2').textContent = host.value;
+host.remove();
+</script>
+</body></html>

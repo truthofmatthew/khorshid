@@ -1,0 +1,6 @@
+node_modules
+dist
+.DS_Store
+store/popup.html
+store/out/icon-512.png
+store/out/promo-880x560.png

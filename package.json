@@ -1,0 +1,20 @@
+{
+  "name": "khorshid",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Persian toolkit for Notion and the web: Jalali dates, Persian fonts, typing fixes and embeddable Persian calendars.",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "test": "node --test src/core/core.test.ts",
+    "typecheck": "tsc --noEmit",
+    "zip": "node build.mjs && cd dist/extension && zip -qr ../khorshid-extension.zip ."
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.300",
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3"
+  }
+}

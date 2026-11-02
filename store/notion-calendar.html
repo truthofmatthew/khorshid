@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="notion.css"></head>
+<body>
+<div class="topbar">کارهای تیم <span>/</span> تقویم محتوا</div>
+<div class="notion-app-inner" style="padding:24px 48px">
+  <h1 class="notion-page-block" style="font-size:32px;margin:0 0 8px">تقویم محتوا</h1>
+  <div class="notion-calendar-view">
+    <div class="cal-bar"><div class="m">November 2026</div><div style="color:#787774">‹ Today ›</div></div>
+    <div class="notion-calendar-header-days"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+    <div class="weeks" id="weeks"></div>
+  </div>
+</div>
+<script>
+const events = { 2: 'شروع کمپین', 5: 'Newsletter #12', 9: 'جلسه‌ی تیم', 12: 'پست اینستاگرام', 18: 'وبینار نوشن', 22: 'آغاز آذر 🍂', 26: 'Launch review', 30: 'گزارش ماهانه' };
+const w = document.getElementById('weeks');
+for (let i = 0; i < 35; i++) {
+  const d = new Date(2026, 10, 1 + i);
+  const cell = document.createElement('div'); cell.className = 'cell' + (i === 1 ? ' today' : '');
+  const day = document.createElement('div'); day.className = 'notion-calendar-view-day';
+  day.textContent = d.getDate() === 1 ? d.toLocaleString('en-US', { month: 'short' }) + ' 1' : d.getDate();
+  cell.append(day);
+  if (d.getMonth() === 10 && events[d.getDate()]) { const e = document.createElement('div'); e.className = 'ev'; e.textContent = events[d.getDate()]; cell.append(e); }
+  w.append(cell);
+}
+</script>
+<script src="shim.js"></script>
+<script src="/dist/extension/notion.js"></script>
+</body></html>

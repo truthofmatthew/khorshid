@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<!-- One store screenshot: headline on top, a browser window below showing a real scene. ?scene=&title=&sub=&popup=1 -->
+<style>
+@font-face { font-family: "Vazirmatn"; src: url("/dist/extension/fonts/Vazirmatn.woff2") format("woff2"); font-weight: 100 900; }
+html, body { margin: 0; width: 1280px; height: 800px; overflow: hidden; }
+body { background: #f4efe6; font-family: "Vazirmatn", sans-serif; color: #1f1d1a; }
+header { height: 150px; display: flex; flex-direction: column; justify-content: center; padding: 0 80px; }
+h1 { margin: 0; font-size: 44px; font-weight: 800; line-height: 1.25; }
+h1 em { font-style: normal; color: #b5452f; }
+p { margin: 4px 0 0; font-size: 20px; color: #6b665e; direction: ltr; text-align: right; }
+.win { position: absolute; top: 160px; left: 80px; width: 1120px; height: 680px; border-radius: 12px 12px 0 0; background: #fff; box-shadow: 0 20px 60px rgba(60,40,20,.18), 0 0 0 1px rgba(0,0,0,.06); overflow: hidden; }
+.chrome { height: 38px; background: #ecebe8; display: flex; align-items: center; gap: 8px; padding: 0 14px; direction: ltr; }
+.chrome i { width: 12px; height: 12px; border-radius: 50%; background: #d9d6d0; display: block; }
+.chrome .url { margin-left: 16px; flex: 1; height: 24px; border-radius: 6px; background: #fff; font: 13px/24px ui-sans-serif, sans-serif; color: #6b665e; padding: 0 10px; }
+.chrome .ext { width: 22px; height: 22px; border-radius: 5px; background: url(/dist/extension/icons/icon48.png) center/cover; outline: 2px solid #b5452f; outline-offset: 1px; }
+.win iframe { border: 0; width: 1120px; height: 642px; display: block; }
+.popup { position: absolute; top: 196px; left: 836px; width: 340px; height: 600px; border-radius: 10px; box-shadow: 0 12px 40px rgba(0,0,0,.25), 0 0 0 1px rgba(0,0,0,.08); overflow: hidden; background: #fbfaf7; }
+.popup iframe { border: 0; width: 340px; height: 600px; }
+</style></head>
+<body>
+<header><h1 id="t"></h1><p id="s"></p></header>
+<div class="win">
+  <div class="chrome"><i></i><i></i><i></i><div class="url" id="u">notion.so</div><div class="ext"></div></div>
+  <iframe id="f"></iframe>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+document.getElementById('t').innerHTML = q.get('title');
+document.getElementById('s').textContent = q.get('sub');
+document.getElementById('u').textContent = q.get('url') || 'notion.so';
+document.getElementById('f').src = q.get('scene');
+if (q.get('popup')) {
+  const p = document.createElement('div'); p.className = 'popup';
+  p.innerHTML = '<iframe src="popup.html"></iframe>'; document.body.append(p);
+}
+</script>
+</body></html>

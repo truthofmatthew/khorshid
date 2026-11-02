@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <title>خورشید</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" width="28" height="28">
+    <h1>خورشید</h1>
+    <p id="status" class="status" role="status">…</p>
+  </header>
+
+  <section aria-labelledby="h-dates">
+    <h2 id="h-dates">تاریخ</h2>
+    <label class="row"><span>نمایش تاریخ شمسی در نوشن</span><input type="checkbox" role="switch" data-key="jalali"></label>
+    <label class="row"><span>اعداد فارسی <small>۱۴۰۵ به‌جای 1405</small></span><input type="checkbox" role="switch" data-key="faDigits"></label>
+    <fieldset class="row">
+      <legend>شکل تاریخ</legend>
+      <div class="seg">
+        <label><input type="radio" name="style" value="auto"><span>مثل نوشن</span></label>
+        <label><input type="radio" name="style" value="numeric"><span>۱۴۰۵/۰۸/۱۱</span></label>
+        <label><input type="radio" name="style" value="long"><span>۱۱ آبان ۱۴۰۵</span></label>
+      </div>
+    </fieldset>
+    <label class="row"><span>تایپ تاریخ شمسی در فیلد تاریخ <small>بنویسید ۱۴۰۵/۸/۱۱ و Enter</small></span><input type="checkbox" role="switch" data-key="jalaliInput"></label>
+  </section>
+
+  <section aria-labelledby="h-text">
+    <h2 id="h-text">متن</h2>
+    <label class="row"><span>راست‌چین خودکار هر پاراگراف</span><input type="checkbox" role="switch" data-key="direction"></label>
+    <label class="row"><span>فونت فارسی</span>
+      <select id="font"><option value="">بدون تغییر</option></select>
+    </label>
+    <p class="hint">متن را انتخاب کنید و <span dir="ltr"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd></span> بزنید تا «sghl» بشود «سلام». <span dir="ltr"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd></span> «ي» و «ك» و نیم‌فاصله را درست می‌کند. کلیک راست هم همین کار را می‌کند.</p>
+  </section>
+
+  <section id="site" hidden aria-labelledby="h-site">
+    <h2 id="h-site">این سایت</h2>
+    <p class="hint" id="site-text"></p>
+    <button id="site-btn" class="secondary" type="button"></button>
+  </section>
+
+  <a class="primary" id="add-calendar" href="https://truthofmatthew.com/khorshid/calendar" target="_blank">افزودن تقویم شمسی به نوشن</a>
+
+  <footer>
+    <a href="https://github.com/truthofmatthew/khorshid/issues" target="_blank">گزارش مشکل</a>
+    <a href="https://truthofmatthew.com/khorshid" target="_blank">راهنما</a>
+    <span id="version"></span>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
