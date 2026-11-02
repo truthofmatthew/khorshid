@@ -62,6 +62,7 @@ button, .primary {
 }
 .secondary { background: transparent; color: var(--text); border: 1px solid var(--line); margin-bottom: 4px; }
 .primary { background: var(--accent); color: var(--accent-text); border: 0; }
+#open-notion { margin-bottom: 10px; }
 .primary:hover { filter: brightness(1.05); }
 
 footer { display: flex; gap: 14px; margin-top: 10px; font-size: 12px; color: var(--muted); }

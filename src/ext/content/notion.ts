@@ -157,14 +157,19 @@ function apply(next: Settings) {
   if (s.jalali) { scan(document.body); convertCalendars(); }
 }
 
-chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
-  if (msg?.type === 'status') reply({ site: 'notion', dates: document.querySelectorAll('[data-kh]').length });
-});
+// The background also injects this script into tabs that were open at install; run once per tab.
+if (!(window as any).__khNotion) {
+  (window as any).__khNotion = true;
+  chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
+    if (msg?.type === 'status') reply({ site: 'notion', dates: document.querySelectorAll('[data-kh]').length });
+  });
+  getSettings().then(start);
+}
 
-getSettings().then((initial) => {
+function start(initial: Settings) {
   apply(initial);
   onSettings(apply);
   observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   document.addEventListener('keydown', jalaliInput, true);
   document.addEventListener('focusout', jalaliInput, true);
-});
+}

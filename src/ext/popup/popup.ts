@@ -32,11 +32,16 @@ async function init() {
     saveSettings({ font: fontSelect.value });
   };
   $('#version').textContent = 'نسخه ' + toFaDigits(chrome.runtime.getManifest().version);
+  $('#guide').onclick = (e) => { e.preventDefault(); chrome.tabs.create({ url: 'welcome.html' }); };
 
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   const url = tab?.url ? new URL(tab.url) : null;
   const status = $('#status');
-  if (!url || !url.protocol.startsWith('http')) { status.textContent = 'در این صفحه کاری نمی‌کند'; return; }
+  if (!url || !url.protocol.startsWith('http')) {
+    status.textContent = 'برای دیدن تاریخ شمسی، نوشن را باز کنید';
+    $('#open-notion').hidden = false;
+    return;
+  }
 
   if (NOTION.test(url.hostname)) {
     const res = await chrome.tabs.sendMessage(tab.id!, { type: 'status' }).catch(() => null);
@@ -46,6 +51,7 @@ async function init() {
     status.dataset.on = String(!!res);
     return;
   }
+  $('#open-notion').hidden = false;
   setupSite(tab, url);
 }
 
