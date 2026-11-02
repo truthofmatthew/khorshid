@@ -11,9 +11,9 @@ Paste into the developer console for item `dhkfoinnpjgabapcgjkmjophfincioij` (up
 
 **Language:** Persian (primary), English
 
-**Homepage:** https://truthofmatthew.com/khorshid/
+**Homepage:** https://truthofmatthew.com/projects/khorshid/fa/
 **Support:** https://github.com/truthofmatthew/khorshid/issues
-**Privacy policy:** https://truthofmatthew.com/khorshid/privacy/
+**Privacy policy:** https://truthofmatthew.com/projects/khorshid/privacy/
 
 **Images:** `store/out/1-dates.png` … `5-writing.png` (1280×800), small promo tile `store/out/promo-440x280.png`, icon `public/icons/icon128.png`.
 

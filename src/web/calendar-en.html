@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Persian (Jalali) calendar for Notion: free embed | Khorshid</title>
+  <meta name="description" content="A free Persian (Jalali, Shamsi) calendar you can embed in Notion, Obsidian or any website. Pick a style, copy the link and paste it into Notion with /embed.">
+  <!-- Served at /projects/khorshid/calendar/; every relative link resolves from /projects/khorshid/. -->
+  <base href="../">
+  <link rel="canonical" href="https://truthofmatthew.com/projects/khorshid/calendar/">
+  <link rel="alternate" hreflang="fa" href="https://truthofmatthew.com/projects/khorshid/calendar/fa/">
+  <link rel="alternate" hreflang="en" href="https://truthofmatthew.com/projects/khorshid/calendar/">
+  <link rel="alternate" hreflang="x-default" href="https://truthofmatthew.com/projects/khorshid/calendar/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="A free Persian calendar for Notion">
+  <meta property="og:url" content="https://truthofmatthew.com/projects/khorshid/calendar/">
+  <meta property="og:image" content="https://truthofmatthew.com/projects/khorshid/og.jpg">
+  <meta property="og:site_name" content="Matthew Truth">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <main class="builder">
+    <header>
+      <a href="./" class="back">Khorshid</a> · <a href="calendar/fa/" hreflang="fa" lang="fa">فارسی</a>
+      <h1>A Persian calendar for Notion</h1>
+      <p class="lead">Pick a calendar, copy the link, then type <code>/embed</code> in Notion and paste it.</p>
+    </header>
+
+    <form id="opts" class="opts">
+      <fieldset>
+        <legend>Type</legend>
+        <label><input type="radio" name="type" value="month" checked> Month</label>
+        <label><input type="radio" name="type" value="today"> Today</label>
+        <label><input type="radio" name="type" value="week"> Week</label>
+        <label><input type="radio" name="type" value="countdown"> Countdown</label>
+      </fieldset>
+      <fieldset>
+        <legend>Background</legend>
+        <label><input type="radio" name="theme" value="auto" checked> Automatic</label>
+        <label><input type="radio" name="theme" value="light"> Light</label>
+        <label><input type="radio" name="theme" value="dark"> Dark</label>
+      </fieldset>
+      <fieldset>
+        <legend>Color</legend>
+        <div class="swatches">
+          <label><input type="radio" name="accent" value="b5452f" checked><span style="--c:#b5452f" title="Brick"></span></label>
+          <label><input type="radio" name="accent" value="2e7d5b"><span style="--c:#2e7d5b" title="Green"></span></label>
+          <label><input type="radio" name="accent" value="2f6db5"><span style="--c:#2f6db5" title="Blue"></span></label>
+          <label><input type="radio" name="accent" value="7a4fb5"><span style="--c:#7a4fb5" title="Purple"></span></label>
+          <label><input type="radio" name="accent" value="37352f"><span style="--c:#37352f" title="Black"></span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Digits</legend>
+        <label><input type="radio" name="digits" value="fa" checked> ۱۲۳</label>
+        <label><input type="radio" name="digits" value="en"> 123</label>
+      </fieldset>
+      <fieldset id="cd" hidden>
+        <legend>Count down to</legend>
+        <label>Jalali date <input name="to" placeholder="1406/1/1" inputmode="numeric"></label>
+        <label>Label <input name="label" placeholder="تا نوروز" dir="rtl"></label>
+      </fieldset>
+    </form>
+
+    <section class="preview" aria-label="Preview">
+      <iframe id="frame" title="Calendar preview" loading="lazy"></iframe>
+    </section>
+
+    <div class="copy">
+      <input id="url" readonly aria-label="Calendar link">
+      <button id="copy" type="button" data-done="Copied">Copy link</button>
+    </div>
+
+    <section class="how">
+      <h2>In Notion</h2>
+      <ol>
+        <li>Copy the link above.</li>
+        <li>In a Notion page, type <code>/embed</code> and press Enter.</li>
+        <li>Paste the link and click "Embed link". Drag the corners to resize.</li>
+      </ol>
+      <h2>Anywhere else</h2>
+      <p>For Obsidian, Coda, ClickUp or your own site, use this code:</p>
+      <pre><code id="iframe-code"></code></pre>
+    </section>
+  </main>
+  <script src="builder.js"></script>
+</body>
+</html>

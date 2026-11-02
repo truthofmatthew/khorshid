@@ -18,7 +18,7 @@ function update() {
     const label = String(f.get('label') ?? '').trim();
     if (label) q.set('label', label);
   }
-  const url = new URL(`../widget/?${q}`, location.href).href;
+  const url = new URL(`embed/?${q}`, document.baseURI).href;
   urlBox.value = url;
   frame.src = url;
   frame.style.height = `${HEIGHT[type]}px`;
@@ -29,7 +29,8 @@ form.addEventListener('input', update);
 document.querySelector<HTMLButtonElement>('#copy')!.onclick = async (e) => {
   await navigator.clipboard.writeText(urlBox.value);
   const btn = e.currentTarget as HTMLButtonElement;
-  btn.textContent = 'کپی شد';
-  setTimeout(() => (btn.textContent = 'کپی لینک'), 1500);
+  const label = btn.textContent;
+  btn.textContent = btn.dataset.done!;
+  setTimeout(() => (btn.textContent = label), 1500);
 };
 update();

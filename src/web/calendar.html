@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ساخت تقویم شمسی برای نوشن | خورشید</title>
   <meta name="description" content="تقویم شمسی رایگان برای نوشن، Obsidian و هر سایتی. نوع و رنگ را انتخاب کنید، لینک را کپی کنید و در نوشن با /embed بچسبانید.">
-  <link rel="canonical" href="https://truthofmatthew.com/khorshid/calendar/">
+  <!-- Served at /projects/khorshid/calendar/fa/; every relative link resolves from /projects/khorshid/. -->
+  <base href="../../">
+  <link rel="canonical" href="https://truthofmatthew.com/projects/khorshid/calendar/fa/">
+  <link rel="alternate" hreflang="fa" href="https://truthofmatthew.com/projects/khorshid/calendar/fa/">
+  <link rel="alternate" hreflang="en" href="https://truthofmatthew.com/projects/khorshid/calendar/">
+  <link rel="alternate" hreflang="x-default" href="https://truthofmatthew.com/projects/khorshid/calendar/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
   <meta property="og:title" content="ساخت تقویم شمسی برای نوشن">
-  <meta property="og:url" content="https://truthofmatthew.com/khorshid/calendar/">
-  <meta property="og:image" content="https://truthofmatthew.com/khorshid/og.jpg">
+  <meta property="og:url" content="https://truthofmatthew.com/projects/khorshid/calendar/fa/">
+  <meta property="og:image" content="https://truthofmatthew.com/projects/khorshid/og.jpg">
   <meta property="og:site_name" content="Matthew Truth">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="../icon.svg">
-  <link rel="stylesheet" href="../site.css">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <main class="builder">
     <header>
-      <a href="../" class="back">خورشید</a>
+      <a href="fa/" class="back">خورشید</a> · <a href="calendar/" hreflang="en" lang="en">English</a>
       <h1>تقویم شمسی برای نوشن</h1>
       <p class="lead">نوع تقویم را انتخاب کنید، لینک را کپی کنید و در نوشن بنویسید <code>/embed</code> و لینک را بچسبانید.</p>
     </header>
@@ -65,7 +71,7 @@
 
     <div class="copy">
       <input id="url" readonly dir="ltr" aria-label="لینک تقویم">
-      <button id="copy" type="button">کپی لینک</button>
+      <button id="copy" type="button" data-done="کپی شد">کپی لینک</button>
     </div>
 
     <section class="how">
@@ -80,6 +86,6 @@
       <pre dir="ltr"><code id="iframe-code"></code></pre>
     </section>
   </main>
-  <script src="../builder.js"></script>
+  <script src="builder.js"></script>
 </body>
 </html>

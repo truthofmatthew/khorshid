@@ -4,7 +4,7 @@
 
 تاریخ شمسی، فونت فارسی و راست‌چین برای نوشن و هر سایتی، به‌علاوه‌ی تقویم شمسی رایگان برای جاسازی در صفحه‌های نوشن.
 
-[نصب از Chrome Web Store](https://chromewebstore.google.com/detail/dhkfoinnpjgabapcgjkmjophfincioij) · [ساخت تقویم برای نوشن](https://truthofmatthew.com/khorshid/calendar/) · [گزارش مشکل](https://github.com/truthofmatthew/khorshid/issues)
+[نصب از Chrome Web Store](https://chromewebstore.google.com/detail/dhkfoinnpjgabapcgjkmjophfincioij) · [ساخت تقویم برای نوشن](https://truthofmatthew.com/projects/khorshid/calendar/fa/) · [گزارش مشکل](https://github.com/truthofmatthew/khorshid/issues)
 
 </div>
 
@@ -24,7 +24,7 @@
 | **Wrong-layout fix** | Select `sghl` and press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> to get `سلام` (and back). Works on any site. |
 | **Persian typing fix** | <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> turns Arabic `ي`/`ك` into `ی`/`ک` and adds half-spaces (`می‌روم`, `کتاب‌ها`). |
 | **Other sites** | Turn fonts and auto direction on for ChatGPT, Gmail, Slack or any site, one site at a time, from the popup. |
-| **Calendar widgets** | Month, today, week strip and countdown. Pick a style at [truthofmatthew.com/khorshid/calendar](https://truthofmatthew.com/khorshid/calendar/), then `/embed` the link in Notion. |
+| **Calendar widgets** | Month, today, week strip and countdown. Pick a style at [truthofmatthew.com/projects/khorshid/calendar](https://truthofmatthew.com/projects/khorshid/calendar/), then `/embed` the link in Notion. |
 
 ![Notion calendar view in Jalali months](store/out/2-calendar.png)
 ![Persian calendar widgets embedded in a Notion page](store/out/3-embed.png)
@@ -36,14 +36,14 @@
 - Dates are never edited in Notion. Each date label gets a `data-kh` attribute and CSS draws the Jalali text in its place, so nothing Jalali is saved to your pages and Notion's re-renders can't break it.
 - Date labels are found by their text (`Nov 2, 2026`, `2026/11/02`, `Today`…), not by Notion's class names, which change without notice. The calendar-view grid is the one place that still relies on Notion's `.notion-calendar-view` classes.
 - Jalali conversion uses the browser's built-in Persian calendar (`Intl.DateTimeFormat` with `ca-persian`). No date library.
-- Nothing leaves the browser. See the [privacy policy](https://truthofmatthew.com/khorshid/privacy/).
+- Nothing leaves the browser. See the [privacy policy](https://truthofmatthew.com/projects/khorshid/privacy/).
 
 ## Develop
 
 ```bash
 npm install
 npm test          # date conversion, Notion label parsing, typing fixes
-npm run build     # dist/extension (load unpacked) and dist/web (served at /khorshid/)
+npm run build     # dist/extension (load unpacked) and dist/web (served at /projects/khorshid/)
 npm run zip       # dist/khorshid-extension.zip for the Chrome Web Store
 node store/render.mjs   # store screenshots, promo tile and icons (needs Chrome or Edge)
 ```

@@ -4,7 +4,7 @@
   "short_name": "Khorshid",
   "version": "1.0.0",
   "description": "تاریخ شمسی، فونت فارسی و راست‌چین در نوشن و هر سایتی. Jalali dates, Persian fonts and typing fixes for Notion and the web.",
-  "homepage_url": "https://truthofmatthew.com/khorshid",
+  "homepage_url": "https://truthofmatthew.com/projects/khorshid/fa/",
   "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
   "host_permissions": ["https://*.notion.so/*"],
   "optional_host_permissions": ["https://*/*"],
