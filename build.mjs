@@ -48,8 +48,8 @@ function helpPage(lang) {
   const store = 'https://chromewebstore.google.com/detail/dhkfoinnpjgabapcgjkmjophfincioij';
   // Someone reading this on the web may not have installed it yet.
   body = body.replace(/<header>[\s\S]*?<\/header>/, fa
-    ? `<header><img src="icons/icon128.png" alt="" width="88" height="88"><h1>راهنمای خورشید</h1><p>اول افزونه را نصب کنید، بعد این سه قدم:</p><a class="btn" href="${store}">نصب از Chrome Web Store</a></header>`
-    : `<header><img src="icons/icon128.png" alt="" width="88" height="88"><h1>How to use Khorshid</h1><p>Install the extension, then follow three steps:</p><a class="btn" href="${store}">Add to Chrome</a></header>`);
+    ? `<header><img src="icons/icon128.png" alt="" width="88" height="88"><h1>راهنمای خورشید</h1><p>اول افزونه رو نصب کن، بعدش این سه تا کار کوچیک:</p><a class="btn" href="${store}">نصبش کن، مجانیه</a></header>`
+    : `<header><img src="icons/icon128.png" alt="" width="88" height="88"><h1>How to use Khorshid</h1><p>Install it first, then three tiny things:</p><a class="btn" href="${store}">Add to Chrome, it's free</a></header>`);
   const title = fa ? 'راهنمای خورشید: تاریخ شمسی و فونت فارسی در نوشن، قدم‌به‌قدم' : 'How to use Khorshid: Persian dates and fonts in Notion, step by step';
   const desc = fa
     ? 'راهنمای ساده‌ی خورشید: نصب، سنجاق کردن، شمسی کردن تاریخ‌های نوشن، تایپ تاریخ شمسی، اصلاح زبان کیبورد و گذاشتن تقویم شمسی در نوشن.'

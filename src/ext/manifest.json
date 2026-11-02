@@ -2,30 +2,70 @@
   "manifest_version": 3,
   "name": "Khorshid: Persian Tools for Notion · تاریخ شمسی نوشن",
   "short_name": "Khorshid",
-  "version": "1.0.0",
-  "description": "تاریخ شمسی، فونت فارسی و راست‌چین در نوشن و هر سایتی. Jalali dates, Persian fonts and typing fixes for Notion and the web.",
+  "version": "1.0.1",
+  "description": "تاریخ شمسی، فونت فارسی و راست‌چین برای نوشن و هر سایتی. Notion with Persian dates, fonts and typing fixes.",
   "homepage_url": "https://truthofmatthew.com/projects/khorshid/fa/",
-  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
-  "host_permissions": ["https://*.notion.so/*"],
-  "optional_host_permissions": ["https://*/*"],
-  "background": { "service_worker": "background.js" },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://*.notion.so/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
-    { "matches": ["https://*.notion.so/*"], "js": ["notion.js"], "run_at": "document_idle" }
+    {
+      "matches": [
+        "https://*.notion.so/*"
+      ],
+      "js": [
+        "notion.js"
+      ],
+      "run_at": "document_idle"
+    }
   ],
   "commands": {
     "fix-layout": {
-      "suggested_key": { "default": "Alt+Shift+L" },
-      "description": "Fix text typed with the wrong keyboard layout"
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Typed on the wrong keyboard? Fix it (sghl → سلام)"
     },
     "fix-persian": {
-      "suggested_key": { "default": "Alt+Shift+P" },
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
       "description": "Fix Persian typing (ی، ک، half-spaces)"
     }
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
-  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
-  "web_accessible_resources": [{ "resources": ["fonts/*"], "matches": ["https://*/*"] }]
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "fonts/*"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    }
+  ]
 }

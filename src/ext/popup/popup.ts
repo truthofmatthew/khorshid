@@ -38,7 +38,7 @@ async function init() {
   const url = tab?.url ? new URL(tab.url) : null;
   const status = $('#status');
   if (!url || !url.protocol.startsWith('http')) {
-    status.textContent = 'برای دیدن تاریخ شمسی، نوشن را باز کنید';
+    status.textContent = 'اینجا کاری از من برنمیاد. نوشن رو باز کن';
     $('#open-notion').hidden = false;
     return;
   }
@@ -46,8 +46,8 @@ async function init() {
   if (NOTION.test(url.hostname)) {
     const res = await chrome.tabs.sendMessage(tab.id!, { type: 'status' }).catch(() => null);
     status.textContent = res
-      ? `فعال در نوشن · ${toFaDigits(res.dates)} تاریخ شمسی شد`
-      : 'صفحه را یک بار تازه کنید';
+      ? `روشنه · ${toFaDigits(res.dates)} تا تاریخ شمسی شد`
+      : 'صفحه‌ی نوشن رو یه بار رفرش کن';
     status.dataset.on = String(!!res);
     return;
   }
@@ -62,14 +62,14 @@ async function setupSite(tab: chrome.tabs.Tab, url: URL) {
   const on = (await chrome.permissions.contains({ origins: [origin] }))
     && (await chrome.scripting.getRegisteredContentScripts({ ids: [id] })).length > 0;
   const status = $('#status');
-  status.textContent = on ? `روشن روی ${url.hostname}` : `روی ${url.hostname} خاموش است`;
+  status.textContent = on ? `روی ${url.hostname} روشنه` : `روی ${url.hostname} خاموشه`;
   status.dataset.on = String(on);
   $('#site').hidden = false;
   $('#site-text').textContent = on
-    ? 'فونت فارسی و راست‌چین خودکار روی این سایت روشن است.'
-    : 'فونت فارسی و راست‌چین خودکار را برای این سایت روشن کنید. فقط همین سایت، نه همه‌جا.';
+    ? 'فونت فارسی و راست‌چین خودکار روی این سایت روشنه.'
+    : 'می‌خوای اینجا هم فونت فارسی و راست‌چین خودکار داشته باشی؟ فقط همین سایت روشن می‌شه، نه همه‌جا.';
   const btn = $<HTMLButtonElement>('#site-btn');
-  btn.textContent = on ? `خاموش کردن روی ${url.hostname}` : `روشن کردن روی ${url.hostname}`;
+  btn.textContent = on ? `روی ${url.hostname} خاموشش کن` : `روی ${url.hostname} روشنش کن`;
   btn.onclick = async () => {
     if (on) {
       await chrome.scripting.unregisterContentScripts({ ids: [id] }).catch(() => {});

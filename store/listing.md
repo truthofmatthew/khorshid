@@ -19,34 +19,34 @@ Paste into the developer console for item `dhkfoinnpjgabapcgjkmjophfincioij` (up
 
 ## Description
 
-خورشید نوشن را فارسی می‌کند.
+نوشن تاریخ شمسی بلد نبود، خورشید یادش داد.
 
-• تاریخ شمسی همه‌جای نوشن: جدول‌ها، ویژگی‌های صفحه، منشن‌های @تاریخ، بازه‌ها و ساعت‌ها. Today می‌شود «امروز».
-• نمای تقویم نوشن با ماه‌های شمسی، نام روزهای هفته و شماره‌ی روزها.
-• تاریخ شمسی تایپ کنید: در فیلد تاریخ نوشن بنویسید ۱۴۰۵/۸/۱۱ و Enter بزنید، نوشن همان روز را ذخیره می‌کند.
-• فونت فارسی: وزیرمتن، استعداد، ساحل، شبنم، صمیم، پرستو. فقط حروف فارسی عوض می‌شوند و متن انگلیسی دست نمی‌خورد.
-• راست‌چین خودکار: هر پاراگراف، سلول جدول و کارت با جهت اولین حرفش نمایش داده می‌شود.
-• اصلاح زبان کیبورد: متن را انتخاب کنید و Alt+Shift+L بزنید تا «sghl» بشود «سلام». روی هر سایتی کار می‌کند.
-• اصلاح نگارش: Alt+Shift+P «ي» و «ك» عربی را درست می‌کند و نیم‌فاصله می‌گذارد.
-• روی ChatGPT، Gmail، Slack و هر سایت دیگری هم می‌توانید فونت و راست‌چین را روشن کنید، فقط برای همان سایت.
-• تقویم شمسی رایگان برای جاسازی در نوشن: ماه، امروز، هفته و شمارش معکوس تا نوروز.
+• تاریخ شمسی همه‌جای نوشن: جدول‌ها، ویژگی‌های صفحه، @تاریخ‌ها، بازه‌ها و ساعت‌ها. حتی Today می‌شه «امروز».
+• نمای تقویم نوشن با ماه‌های شمسی، اسم روزهای هفته و شماره‌ی روزها. دیگه لازم نیست تو ذهنت حساب کنی.
+• تاریخ رو شمسی تایپ کن: تو کادر تاریخ نوشن بنویس ۱۴۰۵/۸/۱۱ و Enter بزن، نوشن همون روز رو ثبت می‌کنه.
+• فونت فارسی: وزیرمتن، استعداد، ساحل، شبنم، صمیم یا پرستو. فقط حروف فارسی عوض می‌شن، انگلیسی‌ها دست نمی‌خورن.
+• راست‌چین خودکار: هر پاراگراف، سلول و کارت خودش می‌فهمه فارسیه یا انگلیسی.
+• کیبورد اشتباهی بود؟ متن رو انتخاب کن و Alt+Shift+L بزن، «sghl» می‌شه «سلام». تو هر سایتی.
+• Alt+Shift+P هم «ي» و «ك» عربی رو درست می‌کنه و نیم‌فاصله می‌ذاره.
+• تو ChatGPT، جیمیل، اسلک یا هر سایت دیگه هم فونت و راست‌چین رو روشن کن، فقط برای همون سایت.
+• تقویم شمسی مجانی برای وسط صفحه‌ی نوشن: ماه، امروز، هفته و شمارش معکوس تا نوروز.
 
-هیچ داده‌ای جمع یا ارسال نمی‌شود و چیزی در صفحه‌های نوشن شما ذخیره نمی‌شود.
+هیچ اطلاعاتی ازت جمع نمی‌کنه و هیچی تو صفحه‌های نوشنت ذخیره نمی‌کنه. مجانی و متن‌بازه.
 
 —
 
-Khorshid makes Notion work in Persian.
+Notion didn't know the Persian calendar. Khorshid taught it.
 
-• Jalali (Shamsi) dates everywhere in Notion: tables, properties, @date mentions, ranges and times.
-• Calendar views in Jalali months with Persian weekday names.
+• Jalali (Shamsi) dates all over Notion: tables, properties, @date mentions, ranges and times. Even "Today" turns into «امروز».
+• Calendar views in Jalali months, with Persian weekday names. No more mental math.
 • Type a Jalali date (1405/8/11) in any Notion date field and Notion saves the right day.
-• Six Persian fonts that only change Persian letters.
-• Automatic right-to-left or left-to-right per paragraph, cell and card.
-• Fix text typed on the wrong keyboard layout on any site (Alt+Shift+L), and fix Arabic ي/ك and half-spaces (Alt+Shift+P).
+• Six Persian fonts that only touch Persian letters.
+• Every paragraph, cell and card picks its own direction: right-to-left or left-to-right.
+• Typed Persian on an English keyboard? Alt+Shift+L fixes it on any site. Alt+Shift+P fixes Arabic ي/ك and half-spaces.
 • Turn fonts and direction on for any other site, one site at a time.
-• Free embeddable Persian calendars for Notion, Obsidian and websites.
+• Free Persian calendars to embed in Notion, Obsidian and websites, including a countdown to Nowruz.
 
-No data is collected or sent anywhere, and nothing is written to your Notion pages.
+It collects nothing about you and never writes to your Notion pages. Free and open source.
 
 ## Permission justifications (for the review form)
 

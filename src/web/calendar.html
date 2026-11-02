@@ -25,26 +25,26 @@
   <main class="builder">
     <header>
       <a href="fa/" class="back">خورشید</a> · <a href="calendar/" hreflang="en" lang="en">English</a>
-      <h1>تقویم شمسی برای نوشن</h1>
-      <p class="lead">نوع تقویم را انتخاب کنید، لینک را کپی کنید و در نوشن بنویسید <code>/embed</code> و لینک را بچسبانید.</p>
+      <h1>یه تقویم شمسی برای نوشنت بساز</h1>
+      <p class="lead">شکلش رو انتخاب کن، لینکش رو کپی کن، تو نوشن بنویس <code>/embed</code> و بچسبون. سه سوت.</p>
     </header>
 
     <form id="opts" class="opts">
       <fieldset>
-        <legend>نوع</legend>
+        <legend>چه تقویمی؟</legend>
         <label><input type="radio" name="type" value="month" checked> ماه</label>
         <label><input type="radio" name="type" value="today"> امروز</label>
         <label><input type="radio" name="type" value="week"> هفته</label>
         <label><input type="radio" name="type" value="countdown"> شمارش معکوس</label>
       </fieldset>
       <fieldset>
-        <legend>رنگ زمینه</legend>
+        <legend>زمینه</legend>
         <label><input type="radio" name="theme" value="auto" checked> خودکار</label>
         <label><input type="radio" name="theme" value="light"> روشن</label>
         <label><input type="radio" name="theme" value="dark"> تیره</label>
       </fieldset>
       <fieldset>
-        <legend>رنگ اصلی</legend>
+        <legend>رنگ</legend>
         <div class="swatches">
           <label><input type="radio" name="accent" value="b5452f" checked><span style="--c:#b5452f" title="آجری"></span></label>
           <label><input type="radio" name="accent" value="2e7d5b"><span style="--c:#2e7d5b" title="سبز"></span></label>
@@ -54,14 +54,14 @@
         </div>
       </fieldset>
       <fieldset>
-        <legend>اعداد</legend>
+        <legend>عددها</legend>
         <label><input type="radio" name="digits" value="fa" checked> ۱۲۳</label>
         <label><input type="radio" name="digits" value="en"> 123</label>
       </fieldset>
       <fieldset id="cd" hidden>
-        <legend>شمارش معکوس تا</legend>
+        <legend>شمارش معکوس تا کِی؟</legend>
         <label>تاریخ شمسی <input name="to" placeholder="۱۴۰۶/۱/۱" inputmode="numeric" dir="ltr"></label>
-        <label>عنوان <input name="label" placeholder="تا نوروز"></label>
+        <label>اسمش <input name="label" placeholder="تا نوروز"></label>
       </fieldset>
     </form>
 
@@ -75,14 +75,14 @@
     </div>
 
     <section class="how">
-      <h2>در نوشن</h2>
+      <h2>تو نوشن</h2>
       <ol>
-        <li>لینک بالا را کپی کنید.</li>
-        <li>در صفحه‌ی نوشن بنویسید <code>/embed</code> و Enter بزنید.</li>
-        <li>لینک را بچسبانید و «Embed link» را بزنید. اندازه را با کشیدن گوشه‌ها تنظیم کنید.</li>
+        <li>لینک بالا رو کپی کن.</li>
+        <li>تو صفحه‌ی نوشن بنویس <code>/embed</code> و Enter بزن.</li>
+        <li>لینک رو بچسبون و «Embed link» رو بزن. اندازه‌ش رو با کشیدن گوشه‌ها درست کن.</li>
       </ol>
-      <h2>جاهای دیگر</h2>
-      <p>در Obsidian، Coda، ClickUp یا سایت خودتان این کد را بگذارید:</p>
+      <h2>جاهای دیگه</h2>
+      <p>برای Obsidian، Coda، ClickUp یا سایت خودت، این کد رو بذار:</p>
       <pre dir="ltr"><code id="iframe-code"></code></pre>
     </section>
   </main>

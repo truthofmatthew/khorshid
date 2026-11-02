@@ -2,8 +2,8 @@ import { DEFAULTS } from './settings.ts';
 import { FONTS } from '../core/fonts.ts';
 
 const MENU = [
-  { id: 'layout', title: 'اصلاح زبان کیبورد (sghl → سلام)' },
-  { id: 'persian', title: 'اصلاح نگارش فارسی (ی، ک، نیم‌فاصله)' },
+  { id: 'layout', title: 'کیبورد اشتباهی بود (sghl ← سلام)' },
+  { id: 'persian', title: 'درست کردن نگارش (ی، ک، نیم‌فاصله)' },
 ] as const;
 
 chrome.runtime.onInstalled.addListener(async ({ reason, previousVersion }) => {

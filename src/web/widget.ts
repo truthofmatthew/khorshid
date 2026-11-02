@@ -99,14 +99,14 @@ function countdown() {
   const [y, m, d] = (q.get('to') ?? '').split('-').map(Number);
   // Default: the next Nowruz.
   let target = y ? toGregorian(y, m, d) : toGregorian(toJalali(t).y + 1, 1, 1);
-  if (!target) { root.textContent = 'تاریخ مقصد درست نیست'; return; }
+  if (!target) { root.textContent = 'این تاریخ رو نمی‌شناسم'; return; }
   const days = Math.round((target.getTime() - t.getTime()) / 86_400_000);
   const tj = toJalali(target);
   const card = el('div', 'card');
   card.append(
     el('div', 'wd', q.get('label') || (y ? 'تا' : 'تا نوروز')),
     el('div', 'big', n(Math.abs(days))),
-    el('div', 'my', days >= 0 ? 'روز مانده' : 'روز گذشته'),
+    el('div', 'my', days >= 0 ? 'روز مونده' : 'روز گذشته'),
     el('div', 'sub', `${n(tj.d)} ${MONTHS[tj.m - 1]} ${n(tj.y)}`),
   );
   root.replaceChildren(card);

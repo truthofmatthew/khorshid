@@ -25,13 +25,13 @@
   <main class="builder">
     <header>
       <a href="./" class="back">Khorshid</a> · <a href="calendar/fa/" hreflang="fa" lang="fa">فارسی</a>
-      <h1>A Persian calendar for Notion</h1>
-      <p class="lead">Pick a calendar, copy the link, then type <code>/embed</code> in Notion and paste it.</p>
+      <h1>Make a Persian calendar for your Notion</h1>
+      <p class="lead">Pick a style, copy the link, type <code>/embed</code> in Notion and paste. Done before your tea gets cold.</p>
     </header>
 
     <form id="opts" class="opts">
       <fieldset>
-        <legend>Type</legend>
+        <legend>Which calendar?</legend>
         <label><input type="radio" name="type" value="month" checked> Month</label>
         <label><input type="radio" name="type" value="today"> Today</label>
         <label><input type="radio" name="type" value="week"> Week</label>
@@ -59,9 +59,9 @@
         <label><input type="radio" name="digits" value="en"> 123</label>
       </fieldset>
       <fieldset id="cd" hidden>
-        <legend>Count down to</legend>
+        <legend>Count down to when?</legend>
         <label>Jalali date <input name="to" placeholder="1406/1/1" inputmode="numeric"></label>
-        <label>Label <input name="label" placeholder="تا نوروز" dir="rtl"></label>
+        <label>Name it <input name="label" placeholder="تا نوروز" dir="rtl"></label>
       </fieldset>
     </form>
 
@@ -82,7 +82,7 @@
         <li>Paste the link and click "Embed link". Drag the corners to resize.</li>
       </ol>
       <h2>Anywhere else</h2>
-      <p>For Obsidian, Coda, ClickUp or your own site, use this code:</p>
+      <p>For Obsidian, Coda, ClickUp or your own site, use this:</p>
       <pre><code id="iframe-code"></code></pre>
     </section>
   </main>
