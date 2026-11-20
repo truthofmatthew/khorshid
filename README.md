@@ -19,7 +19,7 @@
 | **Jalali dates in Notion** | Table and board dates, page properties, `@date` mentions, ranges and times. Even `Today` becomes `امروز`. |
 | **Calendar views** | Month headers (`آبان – آذر ۱۴۰۵`), Persian weekday names and Jalali day numbers. No more mental math. |
 | **Type Jalali dates** | Type `۱۴۰۵/۸/۱۱` in a Notion date field, press Enter, and Notion saves the right day. |
-| **Persian fonts** | Vazirmatn, Estedad, Sahel, Shabnam, Samim, Parastoo. Only Persian letters change; English keeps Notion's font. |
+| **Persian fonts** | Vazirmatn, Vazirmatn Soft, Estedad, Sahel, Shabnam, Samim, Parastoo. Only Persian letters change; English keeps Notion's font. |
 | **Auto direction** | Each paragraph, table cell and card follows its first letter. Code stays left-to-right, as it should. |
 | **Wrong-keyboard fix** | Select `sghl`, press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>, get `سلام` (works the other way too). Any site. |
 | **Persian typing fix** | <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> turns Arabic `ي`/`ك` into `ی`/`ک` and adds the half-spaces (`می‌روم`, `کتاب‌ها`). |
