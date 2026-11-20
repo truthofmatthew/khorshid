@@ -5,6 +5,7 @@ All fonts here are free fonts released under the [SIL Open Font License 1.1](htt
 | Font | Author | Source |
 |---|---|---|
 | Vazirmatn | Saber Rastikerdar | https://github.com/rastikerdar/vazirmatn |
+| Vazirmatn Soft | Matthew Truth (based on Vazirmatn) | https://github.com/truthofmatthew/vazirmatn-soft |
 | Sahel | Saber Rastikerdar | https://github.com/rastikerdar/sahel-font |
 | Shabnam | Saber Rastikerdar | https://github.com/rastikerdar/shabnam-font |
 | Samim | Saber Rastikerdar | https://github.com/rastikerdar/samim-font |

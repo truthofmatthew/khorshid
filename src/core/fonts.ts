@@ -1,6 +1,7 @@
-// Persian fonts by Saber Rastikerdar and Amin Abedi, all under the SIL Open Font License.
+// Persian fonts by Saber Rastikerdar, Amin Abedi and Matthew Truth (Vazirmatn Soft), all under the SIL Open Font License.
 export const FONTS = [
   { id: 'Vazirmatn', fa: 'وزیرمتن', files: [['Vazirmatn.woff2', '100 900']] },
+  { id: 'VazirmatnSoft', fa: 'وزیرمتن نرم', files: [['VazirmatnSoft.woff2', '100 900']] },
   { id: 'Estedad', fa: 'استعداد', files: [['Estedad.woff2', '100 900']] },
   { id: 'Sahel', fa: 'ساحل', files: [['Sahel.woff2', '100 900']] },
   { id: 'Shabnam', fa: 'شبنم', files: [['Shabnam.woff2', '400'], ['Shabnam-Bold.woff2', '700']] },
