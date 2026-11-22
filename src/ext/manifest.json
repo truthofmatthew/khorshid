@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Khorshid: Persian Tools for Notion · تاریخ شمسی نوشن",
   "short_name": "Khorshid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "تاریخ شمسی، فونت فارسی و راست‌چین برای نوشن و هر سایتی. Notion with Persian dates, fonts and typing fixes.",
   "homepage_url": "https://truthofmatthew.com/projects/khorshid/fa/",
   "permissions": [
